@@ -3,7 +3,6 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
 # Reproducible Research : Course Project 1
 
 ## Introduction
@@ -190,6 +189,9 @@ xyplot(Avg~interval|DayCategory, data=intervalTable2, type="l",  layout = c(1,2)
 ```       
 
 Answer: Yes. There are differences in activity patterns between weekdays and weekends. 
+ 
+ 
+ 
  
  
        
