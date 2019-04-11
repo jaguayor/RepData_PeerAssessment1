@@ -3,6 +3,7 @@
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 # Reproducible Research : Course Project 1
 
 ## Introduction
