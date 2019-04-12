@@ -138,7 +138,7 @@ mergeData <- rbind(activityclean, newdata2)
 
 ```{r}
 ##Create sum of steps per date to compare with step 1
-sumTable2 <- aggregate(mergeData$steps ~ mergeData$date, FUN=sum, )
+sumTable2 <- aggregate(mergeData$steps ~ mergeData$date, FUN=sum)
 colnames(sumTable2)<- c("Date", "Steps")
 ```
 
@@ -154,9 +154,9 @@ as.integer(median(sumTable2$Steps))
 
 ```{r}
 ## Creating the histogram of total steps per day, categorized by data set to show impact
-hist(sumTable2$Steps, breaks=5, xlab="Steps", main = "Total Steps per Day with NAs Fixed", col="Black")
-hist(sumTable$Steps, breaks=5, xlab="Steps", main = "Total Steps per Day with NAs Fixed", col="Grey", add=T)
-legend("topright", c("Imputed Data", "Non-NA Data"), fill=c("black", "grey") )
+hist(sumTable2$Steps, breaks=5, xlab="Steps", main = "Total Steps per Day with NAs Fixed", col="Blue")
+hist(sumTable$Steps, breaks=5, xlab="Steps", main = "Total Steps per Day with NAs Fixed", col="grey", add=T)
+legend("topright", c("Imputed Data", "Non-NA Data"), fill=c("blue", "grey") )
 ```
 
 Do these values differ from the estimates from the first part of the assignment? 
@@ -189,9 +189,6 @@ xyplot(Avg~interval|DayCategory, data=intervalTable2, type="l",  layout = c(1,2)
 ```       
 
 Answer: Yes. There are differences in activity patterns between weekdays and weekends. 
- 
- 
- 
  
  
        
